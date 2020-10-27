@@ -1,0 +1,17 @@
+
+header {
+    display: flex;
+}
+
+#logo {
+    width: 100px;
+    height: auto;
+    justify-self: right;
+}
+
+.cita {
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}
