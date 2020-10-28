@@ -12,17 +12,16 @@ if (!empty($_POST)) {
     var_dump($_POST); */
     
 
-    $database->mysql->query("INSERT INTO `consultas` (`Nombre Coder`, `Tema`) VALUES ('{$_POST["nameCoder"]}');");
-    $database->mysql->query("INSERT INTO `consultas` (`Tema`) VALUES ('{$_POST["temaProblema"]}');");
+    $database->mysql->query("INSERT INTO `consultas` (`Nombre Coder`, `Tema`) VALUES ('{$_POST["nameCoder"]}','{$_POST["temaProblema"]}');");
+    
+        header('Location: ../index.php');
+    }
 
-    /* $database->mysql->query("INSERT INTO consultas (Nombre Coder, Tema) VALUES ('{".$_POST['nameCoder']."','".$_POST['temaProblema']."}')"); */
-    /* mysql_query("INSERT INTO users (column 1, column2) VALUES ('".$_POST['value1']."', '".$_POST['value2']."')"); */
+
+    
     
     
         
-
-    header('Location: ../index.php');
-}
 
 
 
