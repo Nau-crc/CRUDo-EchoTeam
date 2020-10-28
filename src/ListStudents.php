@@ -3,12 +3,13 @@ require("Database.php");
 
 $database = new App\Database();
 
-$students = $database->mysql->query("select * FROM students");
+$consultas = $database->mysql->query("select * FROM consultas"); 
+
 
 echo "<ul>";
-foreach ($students as $student) {
+foreach ($consultas as $consulta) {
     echo "
-    <li> {$student["id"]} - {$student["name"]} - {$student["created_at"]} </li>";
+    <li> {$consulta["ID"]} - {$consulta["Nombre Coder"]} - {$consulta["Tema"]} - {$consulta["Fecha"]} </li>";
 }
 echo "</ul>";
 
