@@ -15,4 +15,4 @@ echo "</ul>";
 
 ?>
 
-<a href="src/CreateStudent.php">NUEVO</a>
+<a href="src/CrearCita.php">NUEVO</a>
