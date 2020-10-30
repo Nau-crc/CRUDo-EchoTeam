@@ -1,3 +1,10 @@
+
+<?php
+
+require ("src/CrearCita.php")
+
+
+?>
 <html lang="es">
     <head>
         <meta charset="UTF-8">
@@ -16,14 +23,14 @@
           </button>
         </header>
         <main class="container" id="main">
-        <form>
+        <form action="CrearCita.php" method="post">
             <div class="form-group">
-                <label for="coderName">Nombre</label>
-                <input name="coderName" type="text" class="form-control" placeholder="Introduce tu Nombre" aria-label="Name" aria-describedby="basic-addon1">
+                <label for="nameCoder">Nombre</label>
+                <input name="nameCoder" type="text" class="form-control" placeholder="Introduce tu Nombre" aria-label="Name" aria-describedby="basic-addon1">
             </div>
             <div class="form-group">
-                <label name="tema" for="tema">Tema</label>
-                <input type="text" class="form-control" placeholder="Tema de Consulta" aria-label="tema de consulta" aria-describedby="basic-addon1">
+                <label name="temaProblema" for="tema">Tema</label>
+                <input type="text" class="form-control" placeholder="Tema de Consulta" aria-label="tema de consulta" aria-describedby="basic-addon1" name= "temaProblema">
             </div>
             <?php
                 echo "<p id=fecha> Fecha de creacion: " . date("Y/m/d") . "  " . date("h:i") . "</p>";
@@ -31,7 +38,7 @@
             ?>
             <div class="form-group" id="buttons">
                 <button type="reset" class="btn btn-primary">Borrar Campos</button>
-                <button type="submit" class="btn btn-primary">Enviar</button>
+                <button type="submit" value= "Crear" class="btn btn-primary">Enviar</button>
             </div>
         </form>
         </main>
