@@ -31,6 +31,9 @@ require("src/CrearCita.php");
             <div class="form-group">
                 <label name="temaProblema for=" tema">Tema</label>
                 <input type="text" name="temaProblema" class="form-control" placeholder="Tema de Consulta" aria-label="tema de consulta" aria-describedby="basic-addon1">
+                <label name="temaProblema" for="tema">Tema</label>
+                <input type="text" class="form-control" placeholder="Tema de Consulta" aria-label="tema de consulta" aria-describedby="basic-addon1" name="temaProblema">
+
             </div>
             <?php
             echo "<p id=fecha> Fecha de creacion: " . date("Y/m/d") . "  " . date("h:i") . "</p>";
@@ -39,6 +42,7 @@ require("src/CrearCita.php");
             <div class="form-group" id="buttons">
                 <button type="reset" class="btn btn-primary">Borrar Campos</button>
                 <button type="submit" value="nueva-cita" class="btn btn-primary">Enviar</button>
+                <button type="submit" value="Crear" class="btn btn-primary">Enviar</button>
             </div>
         </form>
     </main>
