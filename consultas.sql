@@ -27,18 +27,20 @@ SET time_zone = "+00:00";
 -- Estructura de la taula `consultas`
 --
 
+DROP TABLE IF EXISTS `consultas`;
+
 CREATE TABLE `consultas` (
-  `ID` int(20) NOT NULL,
-  `Nombre Coder` varchar(50) NOT NULL,
-  `Tema` varchar(250) NOT NULL,
-  `Fecha` timestamp NOT NULL DEFAULT current_timestamp()
+  `id` int(20) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `tema` varchar(250) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Bolcament de dades per a la taula `consultas`
 --
 
-INSERT INTO `consultas` (`ID`, `Nombre Coder`, `Tema`, `Fecha`) VALUES
+INSERT INTO `consultas` (`id`, `name`, `tema`, `created_atconsultas`) VALUES
 (0, 'Carmen', 'Mi vida es un problema.', '2020-10-28 09:03:45'),
 (3, 'Vanessa', 'MySQL, mi ordenador es muy complicado.', '2020-10-28 09:10:04'),
 (4, 'Quim', 'Tengo frio...', '2020-10-28 09:12:29'),
@@ -54,7 +56,7 @@ INSERT INTO `consultas` (`ID`, `Nombre Coder`, `Tema`, `Fecha`) VALUES
 -- Índexs per a la taula `consultas`
 --
 ALTER TABLE `consultas`
-  ADD PRIMARY KEY (`ID`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT per les taules bolcades
@@ -64,7 +66,7 @@ ALTER TABLE `consultas`
 -- AUTO_INCREMENT per la taula `consultas`
 --
 ALTER TABLE `consultas`
-  MODIFY `ID` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
