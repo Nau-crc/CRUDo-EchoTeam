@@ -17,8 +17,7 @@ class ConsultaController
     {
         $consulta = new Consulta();
         $consultas = $consulta->crearListaConsultas();
-
-        // hace falta hacer la view!
+        new View ("ListaConsultas", $listaConsultas) ;
       
 
     }
