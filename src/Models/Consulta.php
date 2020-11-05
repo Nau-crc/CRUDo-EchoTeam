@@ -48,6 +48,10 @@ class Consulta {
         $this->database->mysql->query("INSERT INTO `consultas` (`name`, `tema`) VALUES ('{$_POST["name"]}','{$_POST["tema"]}');");
     }
 
+    public function delete()
+    {
+    $this->database->mysql->query("DELETE * FROM `consultas` WHERE `consultas`. `id`={$this->id}");
+    }
     
 }
 

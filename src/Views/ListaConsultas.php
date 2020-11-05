@@ -24,10 +24,11 @@
         foreach ($data["consultas"] as $consulta) 
         { echo "
                 <tr>
-                  <th scope='row'>{$consulta->id}</th>
+                  <th scope='row'>{$consulta->id}</th> 
                   <td>{$consulta->name}</td>
                   <td>{$consulta->tema}</td>
                   <td>{$consulta->fecha}</td>
+                  <td><button class= 'delete'>Delete</button></td>
                 </tr>
                 ";
         } 
