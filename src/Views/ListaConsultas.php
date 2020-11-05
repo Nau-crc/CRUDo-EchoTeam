@@ -8,6 +8,9 @@
 </head>
 
 <body>
+<a href="?action=create">
+<button type="button" class="btn btn-outline-dark">Crear Consulta</button>
+</a>
   <table class="table table-hover table-dark">
     <thead>
       <tr>
@@ -19,9 +22,8 @@
       </tr>
     </thead>
     <tbody>
-
-      <?php
-        foreach ($data["consultas"] as $consulta) 
+<?php
+       foreach ($data["consultas"] as $consulta) 
         { echo "
                 <tr>
                   <th scope='row'>{$consulta->id}</th>

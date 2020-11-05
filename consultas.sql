@@ -33,14 +33,14 @@ CREATE TABLE `consultas` (
   `id` int(20) NOT NULL,
   `name` varchar(50) NOT NULL,
   `tema` varchar(250) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+  `fecha` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Bolcament de dades per a la taula `consultas`
 --
 
-INSERT INTO `consultas` (`id`, `name`, `tema`, `created_atconsultas`) VALUES
+INSERT INTO `consultas` (`id`, `name`, `tema`, `fecha`) VALUES
 (0, 'Carmen', 'Mi vida es un problema.', '2020-10-28 09:03:45'),
 (3, 'Vanessa', 'MySQL, mi ordenador es muy complicado.', '2020-10-28 09:10:04'),
 (4, 'Quim', 'Tengo frio...', '2020-10-28 09:12:29'),

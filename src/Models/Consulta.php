@@ -43,7 +43,8 @@ class Consulta {
     }
     
 
-    public function crearConsulta () 
+    public function savedb() 
+    
     {
         $this->database->mysql->query("INSERT INTO `consultas` (`name`, `tema`) VALUES ('{$_POST["name"]}','{$_POST["tema"]}');");
     }

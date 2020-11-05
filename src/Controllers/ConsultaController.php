@@ -10,11 +10,21 @@ class ConsultaController
 {
 
     public function __construct()
-    {
+    {   
+        if(isset($_GET) && ($_GET["action"] == "create")) {
+            $this->create();
+            return;
+        }
+
+        if(isset($_GET) && ($_GET["action"] == "save")) {
+            $this->save($_POST);
+            return;
+        }
+
         $this->index();
     }
    
-    public function index()
+    public function index(): void
     {
         $consulta = new Consulta();
         $consultas = $consulta->crearListaConsultas();
@@ -23,6 +33,18 @@ class ConsultaController
       
     }
 
+    public function create(): void
+    {
+        new View ("CrearConsulta");
+
+    }
+    
+    public function save($request): void
+    {
+       $consulta = new consulta($request["name"],["tema"]);
+       $consulta->savedb();
+
+    }
     
 }
 
