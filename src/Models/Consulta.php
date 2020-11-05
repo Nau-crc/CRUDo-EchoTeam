@@ -28,7 +28,7 @@ class Consulta {
     {
         $query = $this->database->mysql->query("select * FROM consultas");
      
-        // Para que serve el fetchAll??????
+        // Para que serve el fetchAll?????? = nose 
 
         // $consultasArray = $query->fetchAll();
 
@@ -44,23 +44,26 @@ class Consulta {
     
 
     public function savedb() 
-    
+
     {
         $this->database->mysql->query("INSERT INTO `consultas` (`name`, `tema`) VALUES ('{$_POST["name"]}','{$_POST["tema"]}');");
     }
 
     public function delete()
+    
     {
-    $this->database->mysql->query("DELETE * FROM `consultas` WHERE `consultas`. `id`={$this->id}");
+     $this->database->mysql->query("DELETE FROM `consultas` WHERE `consultas`.`id`={$this->id}");                            
     }
     
-    public function encontrarId($id){
+    public function encontrarId($id)
+    {
 
         $query = $this->database->mysql->query("SELECT * FROM `consultas` WHERE `id` = {$id}");
-        $result = $query->fetchAll();
-
         
-
+        $result = $query->fetchAll();
+        return new Consulta($result[0]["id"], $result[0]["name"] , $result[0]["tema"], $result[0]["fecha"]);
+    
     }
+    
 }
 

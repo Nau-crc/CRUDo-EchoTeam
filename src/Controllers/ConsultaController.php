@@ -21,6 +21,19 @@ class ConsultaController
             return;
         }
 
+         if(isset($_GET) && ($_GET["action"] == "delete")) {
+         $this->delete($_GET["id"]);
+         return;
+        }
+
+        if(isset($_GET) && ($_GET["action"] == "edit")) {
+            $this->edit($_GET["id"]);
+            return;
+        }
+
+
+       
+
         $this->index();
     }
    
@@ -33,7 +46,6 @@ class ConsultaController
       
     }
 
-<<<<<<< HEAD
     public function create(): void
     {
         new View ("CrearConsulta");
@@ -44,16 +56,31 @@ class ConsultaController
     {
        $consulta = new consulta($request["name"],["tema"]);
        $consulta->savedb();
-
-    }
-=======
-    public function deleteConsulta(){
-
-        
+       
+       $this->index();
 
     }
 
->>>>>>> 3fda0a1937fec4b91266eac25a2a76a4c48c91ec
+
+    public function delete($id)
+    {
+        $consultaDelete = new consulta();
+        $consulta = $consultaDelete->encontrarId($id);
+        $consulta->delete();
+
+        $this->index();
+
+
+    }
+
+    public function edit($id)
+    {
+        $consultaEdit = new consulta();
+        $consulta = $consultaEdit->encontrarId($id);
+
+        new View("EditarConsulta",["consulta" => $consulta]);
+
+    }
     
 }
 

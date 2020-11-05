@@ -9,8 +9,9 @@
 
 <body>
 <a href="?action=create">
-<button type="button" class="btn btn-outline-dark">Crear Consulta</button>
+<button type="button" class="btn btn-outline-dark">Crear Consulta</button> 
 </a>
+
   <table class="table table-hover table-dark">
     <thead>
       <tr>
@@ -30,7 +31,10 @@
                   <td>{$consulta->name}</td>
                   <td>{$consulta->tema}</td>
                   <td>{$consulta->fecha}</td>
-                  <td><button class= 'delete'>Delete</button></td>
+                  <td>
+                  <a href='?action=delete&id={$consulta->id}'>
+                  <button class= 'delete'>Delete</button></td>
+                  </a>
                 </tr>
                 ";
         } 
