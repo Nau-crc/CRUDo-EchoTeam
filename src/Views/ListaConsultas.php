@@ -33,8 +33,10 @@
                   <td>{$consulta->fecha}</td>
                   <td>
                   <a href='?action=delete&id={$consulta->id}'>
-                  <button class= 'delete'>Delete</button></td>
-                  </a>
+                  <button class= 'btn btn-danger'>Delete</button></a>
+                  <a href='?action=edit&id={$consulta->id}'>
+                  <button class= 'btn btn-secondary'>Editar</button></a>
+                  </td>
                 </tr>
                 ";
         } 

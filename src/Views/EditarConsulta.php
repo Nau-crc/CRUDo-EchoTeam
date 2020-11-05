@@ -19,14 +19,14 @@
         </button>
     </header>
     <main class="container" id="main">
-        <form action='?action=update&id=<?php echo $data["consulta"]->$id ?>' method="post">
+        <form action='?action=update&id=<?php echo $data["consulta"]->id ?>' method="post">
             <div class="form-group">
                 <label for="name">Nombre</label>
-                <input required value='<?php echo $data["consulta"]->$name ?>' name="name" type="text" class="form-control"  aria-label="Name" aria-describedby="basic-addon1">
+                <input required value='<?php echo $data["consulta"]->name ?>' name="name" type="text" class="form-control"  aria-label="Name" aria-describedby="basic-addon1">
             </div>
             <div class="form-group">
                 <label name="tema">Tema</label>
-                <input required value='<?php echo $data["consulta"]->$name ?>' type="text" name="tema" class="form-control"  aria-label="tema de consulta" aria-describedby="basic-addon1">
+                <input required value='<?php echo $data["consulta"]->tema ?>' type="text" name="tema" class="form-control"  aria-label="tema de consulta" aria-describedby="basic-addon1">
 
             </div>
             <?php

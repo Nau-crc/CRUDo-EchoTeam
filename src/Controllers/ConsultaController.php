@@ -22,8 +22,8 @@ class ConsultaController
         }
 
          if(isset($_GET) && ($_GET["action"] == "delete")) {
-         $this->delete($_GET["id"]);
-         return;
+            $this->delete($_GET["id"]);
+            return;
         }
 
         if(isset($_GET) && ($_GET["action"] == "edit")) {
@@ -31,8 +31,11 @@ class ConsultaController
             return;
         }
 
+        if(isset($_GET) && ($_GET["action"] == "update")) {
+            $this->update($_POST, $_GET["id"]);
+            return;
+        }
 
-       
 
         $this->index();
     }
@@ -80,6 +83,16 @@ class ConsultaController
 
         new View("EditarConsulta",["consulta" => $consulta]);
 
+    }
+
+    public function update(array $request, $id)
+    {
+        $consultaEnviar = new consulta();
+        $consulta = $consultaEnviar->encontrarId($id);
+        $consulta->rename($request ['name'], ['tema']);
+        $consulta->update(); 
+
+        $this->index();
     }
     
 }

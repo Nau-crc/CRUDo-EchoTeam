@@ -52,17 +52,26 @@ class Consulta {
     public function delete()
     
     {
-     $this->database->mysql->query("DELETE FROM `consultas` WHERE `consultas`.`id`={$this->id}");                            
+        $this->database->mysql->query("DELETE FROM `consultas` WHERE `consultas`.`id`={$this->id}");                            
     }
     
     public function encontrarId($id)
     {
-
         $query = $this->database->mysql->query("SELECT * FROM `consultas` WHERE `id` = {$id}");
         
         $result = $query->fetchAll();
-        return new Consulta($result[0]["id"], $result[0]["name"] , $result[0]["tema"], $result[0]["fecha"]);
-    
+        return new Consulta($result[0]["id"], $result[0]["name"], $result[0]["tema"], $result[0]["fecha"]);
+    }
+
+    public function update() 
+    {
+        $this->database->mysql->query("UPDATE `consultas` SET `name` = '{$this->name}', `tema` ='{$this->tema}' WHERE `consultas`.`id`={$this->id}"); 
+    }
+
+    public function rename($name, $tema) 
+    {
+        $this->name = $name;
+        $this->tema = $tema;
     }
     
 }
