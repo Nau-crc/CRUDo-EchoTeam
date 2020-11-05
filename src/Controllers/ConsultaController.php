@@ -33,6 +33,7 @@ class ConsultaController
       
     }
 
+<<<<<<< HEAD
     public function create(): void
     {
         new View ("CrearConsulta");
@@ -45,6 +46,14 @@ class ConsultaController
        $consulta->savedb();
 
     }
+=======
+    public function deleteConsulta(){
+
+        
+
+    }
+
+>>>>>>> 3fda0a1937fec4b91266eac25a2a76a4c48c91ec
     
 }
 
