@@ -89,7 +89,7 @@ class ConsultaController
     {
         $consultaEnviar = new consulta();
         $consulta = $consultaEnviar->encontrarId($id);
-        $consulta->rename($request ['name'], ['tema']);
+        $consulta->rename($request ['name'], $request ['tema']);
         $consulta->update(); 
 
         $this->index();
