@@ -53,5 +53,13 @@ class Consulta {
     $this->database->mysql->query("DELETE * FROM `consultas` WHERE `consultas`. `id`={$this->id}");
     }
     
+    public function encontrarId($id){
+
+        $query = $this->database->mysql->query("SELECT * FROM `consultas` WHERE `id` = {$id}");
+        $result = $query->fetchAll();
+
+        
+
+    }
 }
 

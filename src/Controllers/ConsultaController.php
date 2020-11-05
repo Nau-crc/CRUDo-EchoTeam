@@ -23,6 +23,12 @@ class ConsultaController
       
     }
 
+    public function deleteConsulta(){
+
+        
+
+    }
+
     
 }
 
