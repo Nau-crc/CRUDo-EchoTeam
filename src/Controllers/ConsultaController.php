@@ -4,6 +4,7 @@
 namespace App\Controllers;
 
 use App\Models\Consulta;
+use App\Views\View;
 
 class ConsultaController 
 {
@@ -17,9 +18,9 @@ class ConsultaController
     {
         $consulta = new Consulta();
         $consultas = $consulta->crearListaConsultas();
-        new View ("ListaConsultas", $listaConsultas) ;
+        
+        new View ("ListaConsultas", ["consultas" => $consultas,]);
       
-
     }
 
     
