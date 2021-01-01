@@ -1,37 +1,39 @@
-## Welcome to GitHub Pages
+# Consultorio Echo
 
-You can use the [editor on GitHub](https://github.com/Nau-crc/CRUDo-EchoTeam/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Desarrollar una aplicación "CRUD" Web en PHP que permita pedir cita a los desarrolladores y equipos para solucionar problemas técnicos con la ayuda del formador o CTO.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Team 
 
-### Markdown
+- [Carmen Perez](https://github.com/Carmenprz) 
+- [Joseph Crespin](https://github.com/JosephCrespin)
+- [Quim Frances](https://github.com/Joaquim-Frances)
+- [Vanessa Poppe](https://github.com/vanessacor)
+- [Laura Rodriguez](https://github.com/Nau-crc)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
+## Project Requirements
 
-# Header 1
-## Header 2
-### Header 3
+- Aplicación de tipo CRUD (Create, Read, Update, Delete)
+- Deberá ser Orientada a objetos con el patrón MVC
+- Deberá estar en un servidor gratuito en producción.
+- Se debe usar Git con buenas prácticas en los commits.
+- El repositorio debe contener un Readme con explicación del proyecto, y una explicación de cómo instalar o ejecutar la aplicación.
 
-- Bulleted
-- List
+## Technologies
 
-1. Numbered
-2. List
+- Frontend: HTML, CSS, [Bootstrap](https://getbootstrap.com/docs/4.5/getting-started/introduction/).
+- Backend: [PHP](https://www.php.net/).
+- Database: [MySQL](https://www.mysql.com/).
 
-**Bold** and _Italic_ and `Code` text
+## Required
 
-[Link](url) and ![Image](src)
-```
+- PHP 7.4
+- Composer
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+## Getting Started
 
-### Jekyll Themes
+- composer install
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Nau-crc/CRUDo-EchoTeam/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+## Run Tests
 
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+- vendor/bin/phpunit
