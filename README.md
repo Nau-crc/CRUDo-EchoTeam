@@ -8,6 +8,7 @@ Desarrollar una aplicación "CRUD" Web en PHP que permita pedir cita a los desar
 - [Joseph Crespin](https://github.com/JosephCrespin)
 - [Quim Frances](https://github.com/Joaquim-Frances)
 - [Vanessa Poppe](https://github.com/vanessacor)
+- [Laura Rodriguez](https://github.com/Nau-crc)
 
 
 ## Project Requirements
